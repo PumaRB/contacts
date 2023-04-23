@@ -16,7 +16,6 @@ struct Person {
         "\(name) \(surname)"
     }
     
-    
     static func getPersons() -> [Person] {
         
         var sortedNames: Set = [""]
@@ -24,15 +23,15 @@ struct Person {
         var sortedEmails: Set = [""]
         var sortedPhones: Set = [""]
 
-        var persons=[Person]()
-        let dataStore = DataStore()
+        var persons: [Person] = []
+    
         
-        let names = dataStore.names.shuffled()
-        let surnames = dataStore.surnames.shuffled()
-        let emails = dataStore.emails.shuffled()
-        let phones = dataStore.phones.shuffled()
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
+        let phones = DataStore.shared.phones.shuffled()
         
-        for _ in 0..<dataStore.names.count {
+        for _ in 0..<DataStore.shared.names.count {
             let name = checkUnique(data: names, checkAtribut: &sortedNames)
             let surname = checkUnique(data: surnames, checkAtribut: &sortedSurnames)
             let email = checkUnique(data: emails, checkAtribut: &sortedEmails)

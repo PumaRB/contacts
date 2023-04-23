@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,6 +52,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Y8t-d6-bgo" kind="show" id="BKE-gm-e6G"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,6 +66,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCE-aL-tml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="215" y="1637"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SHT-xy-ep6">
+            <objects>
+                <viewController id="Y8t-d6-bgo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RD8-WK-dVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fQ-eZ-MIz">
+                                <rect key="frame" x="220" y="350" width="75" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="ElH-fb-rEz" kind="show" id="vj5-mx-Knu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bQx-lX-wvc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YZH-IJ-Y3l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EnU-6S-yQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213.84615384615384" y="2360.9004739336492"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufl-Ea-eIP">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ElH-fb-rEz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NUZ-kJ-AfN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PSy-St-6Zb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OUG-FG-vu2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3j-zD-xpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="2345"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="aZn-Ic-CEl">
@@ -91,7 +138,7 @@
                         <color key="sectionIndexColor" systemColor="labelColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cell" textLabel="cfD-we-uHx" style="IBUITableViewCellStyleDefault" id="Thv-RB-vO5">
-                                <rect key="frame" x="0.0" y="38" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Thv-RB-vO5" id="DzP-RK-ij3">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -121,10 +168,9 @@
         <!--Favorites-->
         <scene sceneID="wx6-nf-eVe">
             <objects>
-                <navigationController id="nAt-dU-nCQ" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="nAt-dU-nCQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="fe5-E6-I2j"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Zph-E8-BbD">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

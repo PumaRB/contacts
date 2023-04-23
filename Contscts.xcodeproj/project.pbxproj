@@ -66,11 +66,11 @@
 			children = (
 				5AB8706929AC08430045CC92 /* AppDelegate.swift */,
 				5AB8706B29AC08430045CC92 /* SceneDelegate.swift */,
-				5AB8706F29AC08430045CC92 /* Main.storyboard */,
 				5AB8708729AEBB2B0045CC92 /* services */,
 				5AB8708429ACAA240045CC92 /* Models */,
 				5AB8708129ACA94A0045CC92 /* ViewControllers */,
 				5AB8707229AC08440045CC92 /* Assets.xcassets */,
+				5AB8706F29AC08430045CC92 /* Main.storyboard */,
 				5AB8707429AC08440045CC92 /* LaunchScreen.storyboard */,
 				5AB8707729AC08440045CC92 /* Info.plist */,
 			);
